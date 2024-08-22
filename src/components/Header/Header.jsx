@@ -1,4 +1,5 @@
 import React from 'react';
+import profile from '../../images/profile.png'
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
                 </div>
                 <div className="flex-none">
                     <button className="btn btn-square btn-ghost">
-                        <img src="/src/images/profile.png" alt="" />
+                        <img src={profile} alt="" />
                     </button>
                 </div>
             </div>
