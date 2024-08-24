@@ -7,12 +7,19 @@ import { useState } from 'react'
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const [read, setRead] = useState(0);
-  const handleMarkAsRead = time => {
+  const handleMarkAsRead = (id, time) => {
     setRead(read + time);
+    // remove form bookmarks 
+    const remainingBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
+    setBookmarks(remainingBookmarks);
+
+
   }
   const handleAddToBookmark = blog => {
     const newBookmarks = [...bookmarks, blog];
     setBookmarks(newBookmarks);
+
+
   }
 
   return (

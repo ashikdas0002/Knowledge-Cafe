@@ -17,7 +17,8 @@ const Bookmarks = ({ bookmarks, read }) => {
                 </h4>
 
                 {
-                    bookmarks.map(bookmark => <Bookmark bookmark={bookmark} />
+                    bookmarks.map((bookmark, idx) => <Bookmark key={idx}
+                        bookmark={bookmark} />
 
                     )
                 }
